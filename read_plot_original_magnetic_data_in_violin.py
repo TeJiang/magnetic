@@ -26,8 +26,8 @@ if __name__ == "__main__":
         # "fake vial"
     ]
     position_list = [
-        "outside on table",
-        "inside high",
+        "outside",
+        "inside",
     ]
     combinations = []
     for i, row in data.iterrows():
@@ -45,7 +45,7 @@ if __name__ == "__main__":
 
     colors = ["orange", "green"]
     # one material get one column
-    plt.figure(figsize=(20, 8), dpi=300)
+    plt.figure(figsize=(10, 4), dpi=300)
     for i in range(len(material_list)):
         # add one subplot
         plt.subplot(1, 4, i+1)
@@ -98,7 +98,7 @@ if __name__ == "__main__":
                 va='center'  # Center-align labels vertically
             )
 
-        plt.legend(loc='lower left')
+        plt.legend()
         plt.xlabel("Vol. susc. [1E-3SI]")
         plt.ylabel("Freq. [Hz]")
         plt.grid(True, linestyle='--', alpha=0.7)  # Grid only for x-axis
